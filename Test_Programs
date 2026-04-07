@@ -1,0 +1,835 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyMV7A9OzGnkfQObNauRZsVN",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    },
+    "widgets": {
+      "application/vnd.jupyter.widget-state+json": {
+        "0524254d0b0b46fc8b6b7f46b8ae3ac1": {
+          "model_module": "@jupyter-widgets/controls",
+          "model_name": "IntSliderModel",
+          "model_module_version": "1.5.0",
+          "state": {
+            "_dom_classes": [],
+            "_model_module": "@jupyter-widgets/controls",
+            "_model_module_version": "1.5.0",
+            "_model_name": "IntSliderModel",
+            "_view_count": null,
+            "_view_module": "@jupyter-widgets/controls",
+            "_view_module_version": "1.5.0",
+            "_view_name": "IntSliderView",
+            "continuous_update": true,
+            "description": "",
+            "description_tooltip": null,
+            "disabled": false,
+            "layout": "IPY_MODEL_644f46d359844e6e9f8e9d278bc10b8a",
+            "max": 100,
+            "min": 0,
+            "orientation": "horizontal",
+            "readout": true,
+            "readout_format": "d",
+            "step": 1,
+            "style": "IPY_MODEL_c13aeff43c714ebb866f9772720ced96",
+            "value": 0
+          }
+        },
+        "644f46d359844e6e9f8e9d278bc10b8a": {
+          "model_module": "@jupyter-widgets/base",
+          "model_name": "LayoutModel",
+          "model_module_version": "1.2.0",
+          "state": {
+            "_model_module": "@jupyter-widgets/base",
+            "_model_module_version": "1.2.0",
+            "_model_name": "LayoutModel",
+            "_view_count": null,
+            "_view_module": "@jupyter-widgets/base",
+            "_view_module_version": "1.2.0",
+            "_view_name": "LayoutView",
+            "align_content": null,
+            "align_items": null,
+            "align_self": null,
+            "border": null,
+            "bottom": null,
+            "display": null,
+            "flex": null,
+            "flex_flow": null,
+            "grid_area": null,
+            "grid_auto_columns": null,
+            "grid_auto_flow": null,
+            "grid_auto_rows": null,
+            "grid_column": null,
+            "grid_gap": null,
+            "grid_row": null,
+            "grid_template_areas": null,
+            "grid_template_columns": null,
+            "grid_template_rows": null,
+            "height": null,
+            "justify_content": null,
+            "justify_items": null,
+            "left": null,
+            "margin": null,
+            "max_height": null,
+            "max_width": null,
+            "min_height": null,
+            "min_width": null,
+            "object_fit": null,
+            "object_position": null,
+            "order": null,
+            "overflow": null,
+            "overflow_x": null,
+            "overflow_y": null,
+            "padding": null,
+            "right": null,
+            "top": null,
+            "visibility": null,
+            "width": null
+          }
+        },
+        "c13aeff43c714ebb866f9772720ced96": {
+          "model_module": "@jupyter-widgets/controls",
+          "model_name": "SliderStyleModel",
+          "model_module_version": "1.5.0",
+          "state": {
+            "_model_module": "@jupyter-widgets/controls",
+            "_model_module_version": "1.5.0",
+            "_model_name": "SliderStyleModel",
+            "_view_count": null,
+            "_view_module": "@jupyter-widgets/base",
+            "_view_module_version": "1.2.0",
+            "_view_name": "StyleView",
+            "description_width": "",
+            "handle_color": null
+          }
+        }
+      }
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/PradeepK-eng/Google-Colab-Files/blob/main/Test_Programs\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import ipywidgets as widgets\n",
+        "widgets.IntSlider()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 49,
+          "referenced_widgets": [
+            "0524254d0b0b46fc8b6b7f46b8ae3ac1",
+            "644f46d359844e6e9f8e9d278bc10b8a",
+            "c13aeff43c714ebb866f9772720ced96"
+          ]
+        },
+        "id": "25093w5pstKL",
+        "outputId": "93160c25-e4e7-41d7-ea63-fa22cd4e9189"
+      },
+      "execution_count": 1,
+      "outputs": [
+        {
+          "output_type": "display_data",
+          "data": {
+            "text/plain": [
+              "IntSlider(value=0)"
+            ],
+            "application/vnd.jupyter.widget-view+json": {
+              "version_major": 2,
+              "version_minor": 0,
+              "model_id": "0524254d0b0b46fc8b6b7f46b8ae3ac1"
+            }
+          },
+          "metadata": {}
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "x=11\n",
+        "y=4\n",
+        "x=x % y\n",
+        "x=x % y\n",
+        "y = y % x\n",
+        "print(y)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ZFtbADaUK4uX",
+        "outputId": "53799224-e7a9-435c-c0ba-037ec1aa1d61"
+      },
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "1\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "z=y=x=1\n",
+        "print(x,y,z,sep='*')"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "7vdWUcdHL4OX",
+        "outputId": "d35ed7db-918d-49cd-949f-797fa44cdf31"
+      },
+      "execution_count": 3,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "1*1*1\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "x= 1 / 2 + 3 // 3 + 4 ** 2\n",
+        "print(x)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "4rc1ipdaMUUe",
+        "outputId": "21b19aeb-a8c3-4fe6-9c9d-b02c9d1f785c"
+      },
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "17.5\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "x=input()\n",
+        "y=input()\n",
+        "print(x+y)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 338
+        },
+        "id": "xHmKwTQrNUQX",
+        "outputId": "d46e6b87-2a84-45b7-e37d-c03239e25560"
+      },
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "KeyboardInterrupt",
+          "evalue": "Interrupted by user",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mKeyboardInterrupt\u001b[0m                         Traceback (most recent call last)",
+            "\u001b[0;32m/tmp/ipykernel_2780/2495637477.py\u001b[0m in \u001b[0;36m<cell line: 0>\u001b[0;34m()\u001b[0m\n\u001b[0;32m----> 1\u001b[0;31m \u001b[0mx\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0minput\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m      2\u001b[0m \u001b[0my\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0minput\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      3\u001b[0m \u001b[0mprint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mx\u001b[0m\u001b[0;34m+\u001b[0m\u001b[0my\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;32m/usr/local/lib/python3.12/dist-packages/ipykernel/kernelbase.py\u001b[0m in \u001b[0;36mraw_input\u001b[0;34m(self, prompt)\u001b[0m\n\u001b[1;32m   1175\u001b[0m                 \u001b[0;34m\"raw_input was called, but this frontend does not support input requests.\"\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   1176\u001b[0m             )\n\u001b[0;32m-> 1177\u001b[0;31m         return self._input_request(\n\u001b[0m\u001b[1;32m   1178\u001b[0m             \u001b[0mstr\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mprompt\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   1179\u001b[0m             \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0m_parent_ident\u001b[0m\u001b[0;34m[\u001b[0m\u001b[0;34m\"shell\"\u001b[0m\u001b[0;34m]\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;32m/usr/local/lib/python3.12/dist-packages/ipykernel/kernelbase.py\u001b[0m in \u001b[0;36m_input_request\u001b[0;34m(self, prompt, ident, parent, password)\u001b[0m\n\u001b[1;32m   1217\u001b[0m             \u001b[0;32mexcept\u001b[0m \u001b[0mKeyboardInterrupt\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   1218\u001b[0m                 \u001b[0;31m# re-raise KeyboardInterrupt, to truncate traceback\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m-> 1219\u001b[0;31m                 \u001b[0;32mraise\u001b[0m \u001b[0mKeyboardInterrupt\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m\"Interrupted by user\"\u001b[0m\u001b[0;34m)\u001b[0m \u001b[0;32mfrom\u001b[0m \u001b[0;32mNone\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m   1220\u001b[0m             \u001b[0;32mexcept\u001b[0m \u001b[0mException\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m   1221\u001b[0m                 \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mlog\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mwarning\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m\"Invalid Message:\"\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mexc_info\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0;32mTrue\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;31mKeyboardInterrupt\u001b[0m: Interrupted by user"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "x=int(input())\n",
+        "y=int(input())\n",
+        "print(x+y)\n"
+      ],
+      "metadata": {
+        "id": "OL9WYQA5NgMH"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "x=input()\n",
+        "y=int(input())\n",
+        "print(x * y)"
+      ],
+      "metadata": {
+        "id": "e5UV_Yx1N1LW"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "2 == 2."
+      ],
+      "metadata": {
+        "id": "FM8tynUGUMZ3"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "varl == 0"
+      ],
+      "metadata": {
+        "id": "zL4qt3wUUmYu"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "largest_number = -999999999\n",
+        "number = int(input())\n",
+        "if number == -1:\n",
+        "    print(largest_number)\n",
+        "    exit()\n",
+        "if number > largest_number:\n",
+        "    largest_number = number"
+      ],
+      "metadata": {
+        "id": "mO8W1aFCeNXo"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "plant = str(input(\"Enter the plant name correctly: \"))\n",
+        "\n",
+        "if plant == \"Spathiphyllum\":\n",
+        "    print(\"Yes - Spathiphyllum is the best plant ever!\")\n",
+        "elif plant == \"spathiphyllum\":\n",
+        "    print(\"No, I want a big Spathiphyllum!\")\n",
+        "elif plant == \"pelargonium\":\n",
+        "    print(\"Spathiphyllum! Not pelargonium!\")\n",
+        "elif plant == \"SPATHIPHYLLUM\":\n",
+        "    print(\"No, I want a big Spathiphyllum!\")"
+      ],
+      "metadata": {
+        "id": "NY3kTYx9gAA5"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# A program that reads a sequence of numbers\n",
+        "# and counts how many numbers are even and how many are odd.\n",
+        "# The program terminates when zero is entered.\n",
+        "\n",
+        "odd_numbers = 0\n",
+        "even_numbers = 0\n",
+        "\n",
+        "# Read the first number.\n",
+        "number = int(input(\"Enter a number or type 0 to stop: \"))\n",
+        "\n",
+        "# 0 terminates execution.\n",
+        "while number != 0:\n",
+        "    # Check if the number is odd.\n",
+        "    if number % 2 == 1:\n",
+        "        # Increase the odd_numbers counter.\n",
+        "        odd_numbers += 1\n",
+        "    else:\n",
+        "        # Increase the even_numbers counter.\n",
+        "        even_numbers += 1\n",
+        "    # Read the next number.\n",
+        "    number = int(input(\"Enter a number or type 0 to stop: \"))\n",
+        "\n",
+        "# Print results.\n",
+        "print(\"Odd numbers count:\", odd_numbers)\n",
+        "print(\"Even numbers count:\", even_numbers)"
+      ],
+      "metadata": {
+        "id": "q0021kf3zEBK"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "counter = 5\n",
+        "while counter != 0:\n",
+        "    print(\"Inside the loop.\", counter)\n",
+        "    counter -= 1\n",
+        "print(\"Outside the loop.\", counter)"
+      ],
+      "metadata": {
+        "id": "5eDoqT5Hz93r"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "counter = 5\n",
+        "while counter:\n",
+        "    print(\"Inside the loop.\", counter)\n",
+        "    counter -= 1\n",
+        "print(\"Outside the loop.\", counter)\n"
+      ],
+      "metadata": {
+        "id": "pwbtPwf80Fia"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "i = 1\n",
+        "j = not not i\n",
+        "k = not i\n",
+        "print(i,j,k)"
+      ],
+      "metadata": {
+        "id": "Ok1rn2IMA6lQ"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "bit = i & j\n",
+        "i = 15\n",
+        "j = 22\n",
+        "print(i , j)\n",
+        "print(bit)\n",
+        "z= not i\n",
+        "print(logneg)\n",
+        "bitneg = ~i\n",
+        "print(bitneg)"
+      ],
+      "metadata": {
+        "id": "F0Mb-JuUCg7B"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "my_list = [17, 3, 11, 5, 1, 9, 7, 15, 1]\n",
+        "largest = my_list[0]\n",
+        "\n",
+        "for i in my_list:\n",
+        "    if i < largest:\n",
+        "        largest = i\n",
+        "\n",
+        "print(largest)"
+      ],
+      "metadata": {
+        "id": "MM3rMMyqTOGX"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "my_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\n",
+        "to_find = 5\n",
+        "found = False\n",
+        "\n",
+        "for i in range(len(my_list)):\n",
+        "    found = my_list[i] == to_find\n",
+        "    if found:\n",
+        "        break\n",
+        "\n",
+        "if found:\n",
+        "    print(\"Element found at index\", i)\n",
+        "else:\n",
+        "    print(\"absent\")"
+      ],
+      "metadata": {
+        "id": "71j4kDVFTjK4"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "drawn = [5, 11, 9, 42, 3, 49]\n",
+        "bets = [3, 7, 11, 42, 34, 49]\n",
+        "hits = 0\n",
+        "\n",
+        "for number in bets:\n",
+        "    if number in drawn:\n",
+        "        hits += 1\n",
+        "\n",
+        "print(hits)\n"
+      ],
+      "metadata": {
+        "id": "CJvTdz7vT843"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "vehicles_one = ['car', 'bicycle', 'motor']\n",
+        "print(vehicles_one) # outputs: ['car', 'bicycle', 'motor']\n",
+        "\n",
+        "vehicles_two = vehicles_one\n",
+        "del vehicles_one[0] # deletes 'car'\n",
+        "print(vehicles_two) # outputs: ['bicycle', 'motor']\n",
+        "print(vehicles_one) # outputs: ['bicycle', 'motor']"
+      ],
+      "metadata": {
+        "id": "YdEICwBaXYmX"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "my_list = [\"A\", \"B\", 1, 2]\n",
+        "\n",
+        "print(\"A\" in my_list)  # outputs: True\n",
+        "print(\"C\" not in my_list)  # outputs: True\n",
+        "print(2 not in my_list)  # outputs: False"
+      ],
+      "metadata": {
+        "id": "x6Msq-IpYPtO"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "list_1 = [\"A\", \"B\", \"C\"]\n",
+        "list_2 = list_1[:]\n",
+        "list_3 = list_2[:]\n",
+        "\n",
+        "del list_1[0]\n",
+        "del list_2[0]\n",
+        "\n",
+        "print(list_3)\n"
+      ],
+      "metadata": {
+        "id": "Q-Ey32MiaCkm"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "my_list = [1, 2, \"in\", True, \"ABC\"]\n",
+        "\n",
+        "print(1 in my_list)  # outputs True\n",
+        "print(\"A\" in my_list)  # outputs True\n",
+        "print(3 in my_list)  # outputs True\n",
+        "print(False in my_list)  # outputs False"
+      ],
+      "metadata": {
+        "id": "i36VW18UajGI"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "squares = [x ** 2 for x in range(10)]\n",
+        "twos = [2 ** i for i in range(8)]\n",
+        "odds = [x for x in squares if x % 2 != 0 ]\n",
+        "print(squares)\n",
+        "print(twos)\n",
+        "print(odds)\n",
+        "#print(squares, twos, odds, sep= \"\\n\")"
+      ],
+      "metadata": {
+        "id": "-qU6Mfueb1k0"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "cube = [[[':(', 'x', 'x'],\n",
+        "         [':)', 'x', 'x'],\n",
+        "         [':(', 'x', 'x']],\n",
+        "\n",
+        "        [[':)', 'x', 'x'],\n",
+        "         [':(', 'x', 'x'],\n",
+        "         [':)', 'x', 'x']],\n",
+        "\n",
+        "        [[':(', 'x', 'x'],\n",
+        "         [':)', 'x', 'x'],\n",
+        "         [':)', 'x', 'x']]]\n",
+        "\n",
+        "print(cube)\n",
+        "print(cube[0][0][0])  # outputs: ':('\n",
+        "print(cube[2][2][0])  # outputs: ':)'"
+      ],
+      "metadata": {
+        "id": "8s2GFUEAdIfm"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "i=0\n",
+        "while i<=3:\n",
+        "  i += 2\n",
+        "  print(\"*\")"
+      ],
+      "metadata": {
+        "id": "dFP0e1RNeBrf"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "i=0\n",
+        "while i <=5:\n",
+        "  i += 1\n",
+        "  if i%2 == 0:\n",
+        "    break\n",
+        "  print(\"*\")"
+      ],
+      "metadata": {
+        "id": "4tH5AyJ8e5gp"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "for i in range(1):\n",
+        "  print(\"#\")\n",
+        "else:\n",
+        "  print(\"#\")"
+      ],
+      "metadata": {
+        "id": "TqRW_tgefNO9"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "var = 0\n",
+        "while var < 6:\n",
+        "    var += 1\n",
+        "    if var % 2 == 0:\n",
+        "        continue\n",
+        "    print(\"#\")\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "Yw5kXY5zfld2"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "var = 1\n",
+        "while var < 10:\n",
+        "    print(\"#\")\n",
+        "    var = var << 1\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "d_kkfq2SfwEG"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "z = 10\n",
+        "y = 0\n",
+        "x = y < z and z > y or y > z and z < y\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "3zlU4_wOgFDn"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "a = 1\n",
+        "b = 0\n",
+        "c = a & b\n",
+        "d = a | b\n",
+        "e = a ^ b\n",
+        "\n",
+        "print(c + d + e)\n",
+        "print(c)\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "Zb53oVjDgl4F"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "my_list = [3, 1, -2]\n",
+        "print(my_list[my_list[-1]])\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "fqlYwDn_gyxY"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "my_list = [1, 2, 3, 4]\n",
+        "print(my_list[-3:-2])\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "Em7BhU16hIxI"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "vals = [0, 1, 2]\n",
+        "vals.insert(0, 1)\n",
+        "del vals[1]\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "FxuWEWHehsTn"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "my_list_1 = [1, 2, 3]\n",
+        "my_list_2 = []\n",
+        "for v in my_list_1:\n",
+        "    my_list_2.insert(0, v)\n",
+        "print(my_list_2)\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "a9juJyBaitnW"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "my_list = [1, 2, 3]\n",
+        "for v in range(len(my_list)):\n",
+        "    my_list.insert(1, my_list[v])\n",
+        "print(my_list)\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "jBUcsd4piy5T"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "t = [[3-i for i in range (3)] for j in range (3)]\n",
+        "s = 0\n",
+        "for i in range(3):\n",
+        "    s += t[i][i]\n",
+        "print(s)\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "2cLCZ_ghjHAE"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "my_list = [[0, 1, 2, 3] for i in range(2)]\n",
+        "print(my_list[2][0])\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "kZJI7umcjMCW"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
